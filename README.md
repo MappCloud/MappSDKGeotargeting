@@ -1,5 +1,6 @@
-# MappSDKGeotargeting
+MappSDKGeotargeting
 ===========
+
 This repository contains the Mapp Geotargeting iOS SDK, which can be use for push messages sendout at region of interests.
 
 Integration
