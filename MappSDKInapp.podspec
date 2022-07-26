@@ -12,10 +12,12 @@ Pod::Spec.new do |s|
   s.author       = { "Mapp Digital" => "https://mapp.com/contact-us/" }
   s.source       = { :git => "https://github.com/MappCloud/MappSDKGeotargeting.git", :tag => "#{s.version}" }
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64 i386', 'VALID_ARCHS[sdk=iphoneos*]' => 'arm64' }
-  s.ios.framework = 'WebKit'
+  s.ios.framework = 'CoreLocation'
+  s.ios.library = 'sqlite3'
   s.platform     = :ios, "10.0"
   s.ios.vendored_frameworks = "SDK/AppoxeeLocationServices.xcframework"
   s.preserve_paths = 'SDK/AppoxeeLocationServices.xcframework'
+  s.dependency 'MappSDK', '~> 6.0.0'
   s.requires_arc = true
 
 end
